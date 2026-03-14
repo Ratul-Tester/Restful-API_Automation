@@ -3,7 +3,7 @@ package org.restfulapiautomation.pojos;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Bookingid {
+public class BookingResponse {
 
     @SerializedName("bookingid")
     @Expose

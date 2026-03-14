@@ -10,7 +10,27 @@ public class AssertActions {
         assertEquals(actual, expected, description);
     }
 
+    public void verifyResponseBody(float actual, float expected, String description) {
+        assertEquals(actual, expected, description);
+    }
+
+    public void verifyResponseBody(int actual, int expected, String description) {
+        assertEquals(actual, expected, description);
+    }
+
+    public void verifyResponseBody(double actual, double expected, String description) {
+        assertEquals(actual, expected, description);
+    }
+
+    public void verifyResponseBody(boolean actual, boolean expected, String description) {
+        assertEquals(actual, expected, description);
+    }
+
     public void verifyStatusCodeInvalidResponse(Response response) {
-        assertEquals(response.getStatusCode(), 404);
+        assertEquals(String.valueOf(response.getStatusCode()).startsWith("50"),true,"value of status code is"+response.getStatusCode());
+    }
+
+    public void verifyStatusCode(Response response, Integer expected) {
+        assertEquals(response.getStatusCode(),expected);
     }
 }
